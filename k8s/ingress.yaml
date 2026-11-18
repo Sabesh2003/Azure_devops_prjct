@@ -1,0 +1,19 @@
+# Apply this after installing an NGINX Ingress Controller in the AKS cluster.
+# The ingressClassName must match the ingress controller you install.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: attendance-app-ingress
+  namespace: attendance-app
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: attendance-app-service
+                port:
+                  number: 80

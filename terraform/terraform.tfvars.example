@@ -1,0 +1,10 @@
+subscription_id      = "00000000-0000-0000-0000-000000000000"
+location             = "Central India"
+resource_group_name  = "rg-employee-attendance"
+vnet_name            = "vnet-employee-attendance"
+acr_name             = "replacewithuniqueacr123"
+aks_name             = "aks-employee-attendance"
+system_node_vm_size  = "Standard_D2s_v5"
+user_node_vm_size    = "Standard_D2s_v5"
+system_node_count    = 1
+user_node_count      = 1
